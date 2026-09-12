@@ -1,0 +1,31 @@
+{
+	"name": "baidu-watermark-remover",
+	"version": "1.0.0",
+	"description": "百度图片去水印工具",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "tsx watch --env-file=.env.development src/adapters/node.ts",
+		"start": "tsx --env-file=.env.production src/adapters/node.ts",
+		"build": "vite build",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"hono": "^4.13.7",
+		"simple-icons": "^16.30.0"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	},
+	"devDependencies": {
+		"@hono/node-server": "^1.19.17",
+		"@tailwindcss/vite": "^4.3.3",
+		"@types/node": "^22.20.2",
+		"tailwindcss": "^4.3.3",
+		"tsx": "^4.23.13",
+		"typescript": "^5.9.3",
+		"vite": "^6.4.3"
+	}
+}

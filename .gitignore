@@ -1,0 +1,24 @@
+# 依赖
+node_modules/
+
+# 构建产物
+public/
+
+# 部署工具本地状态
+.wrangler/
+.vercel/
+
+# 环境变量与密钥
+.dev.vars
+.env
+.env.*
+
+# 日志
+*.log
+
+# 编辑器与系统文件
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+.history/

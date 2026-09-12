@@ -1,0 +1,12 @@
+// Cloudflare Workers 部署配置
+// public/ 下的静态资源由 Workers Static Assets 托管（命中文件直接返回），
+// 未命中的路径（如 /api/*）进入 Worker 处理
+{
+	"name": "watermark-remover",
+	"main": "src/adapters/worker.ts",
+	"compatibility_date": "2026-01-01",
+	"assets": {
+		"directory": "./public",
+		"binding": "ASSETS"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"buildCommand": "npm run build",
+	"rewrites": [
+		{ "source": "/api/(.*)", "destination": "/api" },
+		{ "source": "/assets/(.*)", "destination": "/public/assets/$1" },
+		{ "source": "/favicon.svg", "destination": "/public/favicon.svg" },
+		{ "source": "/", "destination": "/public/index.html" }
+	],
+	"functions": {
+		"api/[[route]].ts": {
+			"maxDuration": 30
+		}
+	}
+}
